@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BLACK MYST</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#reseñas">Reseñas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Productos -->
+    <section id="productos">
+        <h2>BLACK MYST</h2>
+        <div class="productos-container">
+            <!-- Producto 1 -->
+            <div class="producto-card">
+                <img src="./assets/img/image1.jpg" alt="Producto 1">
+                <h3>Bicyle Red premium</h3>
+                <button>Comprar</button>
+            </div>
+            <!-- Producto 2 -->
+            <div class="producto-card">
+                <img src="./assets/img/image2.jpg" alt="Producto 2">
+                <h3>Multiplicador de bolas</h3>
+                <button>Comprar</button>
+            </div>
+            <!-- Producto 3 -->
+            <div class="producto-card">
+                <img src="./assets/img/image3.webp" alt="Producto 3">
+                <h3>Bicycle standar roja-azul</h3>
+                <button>Comprar</button>
+            </div>
+        </div>
+        <div class="productos-container">
+            <!-- Producto 4 -->
+            <div class="producto-card">
+                <img src="./assets/img/image4.jpg" alt="Producto 4">
+                <h3>Caja de magia</h3>
+                <button>Comprar</button>
+            </div>
+            <!-- Producto 5 -->
+            <div class="producto-card">
+                <img src="./assets/img/image5.jpg" alt="Producto 5">
+                <h3>Baraja cambio de color</h3>
+                <button>Comprar</button>
+            </div>
+            <!-- Producto 6 -->
+            <div class="producto-card">
+                <img src="./assets/img/image6.webp" alt="Producto 6">
+                <h3>Magia con naipes y monedas</h3>
+                <button>Comprar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Reseñas (Carrousel) -->
+    <section id="reseñas">
+        <h2>Reseñas de Clientes</h2>
+        <div class="reseñas-carrousel">
+            <div class="reseña">
+                <p>"¡Increíble! Los productos son de la más alta calidad y llegaron rápidamente."</p>
+                <p>- Juan Pérez</p>
+            </div>
+            <div class="reseña">
+                <p>"Recomiendo 100%. Todo lo que he comprado ha superado mis expectativas."</p>
+                <p>- Ana Gómez</p>
+            </div>
+            <div class="reseña">
+                <p>"El servicio es excelente, me encantaron los productos. ¡Volveré a comprar!"</p>
+                <p>- Carlos Díaz</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form action="https://formspree.io/f/xovqwbbl" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 BLACK MYST. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
