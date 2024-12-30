@@ -7,24 +7,56 @@
     <title>BLACK MYST</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
 
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#reseñas">Reseñas</a></li>
-            </ul>
-        </nav>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <span class="brand-name">BLACK MYST</span>
+                        <span class="brand-tagline">La magia está en tus manos</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#quienes-somos">Quiénes Somos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#reseñas">Reseñas</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link position-relative" href="#" onclick="mostrarCarrito()">
+                                    <i class="bi bi-cart3"></i>
+                                    <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+       
+        
+        
     </header>
 
     <!-- Sección de Productos -->
     <section id="productos">
-        <h2>BLACK MYST</h2>
+        
+
+        <div class="busqueda-container">
+            <input type="text" id="buscador" class="form-control" placeholder="Buscar productos...">
+        </div>
+        
+
         <div class="productos-container">
             <!-- Producto 1 -->
             <div class="producto-card">
@@ -44,8 +76,6 @@
                 <h3>Bicycle standar roja-azul</h3>
                 <button>Comprar</button>
             </div>
-        </div>
-        <div class="productos-container">
             <!-- Producto 4 -->
             <div class="producto-card">
                 <img src="./assets/img/image4.jpg" alt="Producto 4">
@@ -65,28 +95,72 @@
                 <button>Comprar</button>
             </div>
         </div>
-    </section>
-
-    <!-- Sección Reseñas (Carrousel) -->
-    <section id="reseñas">
-        <h2>Reseñas de Clientes</h2>
-        <div class="reseñas-carrousel">
-            <div class="reseña">
-                <p>"¡Increíble! Los productos son de la más alta calidad y llegaron rápidamente."</p>
-                <p>- Juan Pérez</p>
+    
+        <section id="quienes-somos" class="quienes-somos">
+            <div class="container">
+                <h2>Quiénes Somos</h2>
+                <p>
+                    En <strong>BLACK MYST</strong>, creemos en la magia que puedes llevar a tu vida diaria. Nos dedicamos a ofrecer productos de la más alta calidad para magos aficionados y profesionales, ayudándote a crear momentos inolvidables. 
+                </p>
+                <p>
+                    ¡Descubre los secretos de la magia con nosotros y haz que lo imposible sea posible!
+                </p>
             </div>
-            <div class="reseña">
-                <p>"Recomiendo 100%. Todo lo que he comprado ha superado mis expectativas."</p>
-                <p>- Ana Gómez</p>
-            </div>
-            <div class="reseña">
-                <p>"El servicio es excelente, me encantaron los productos. ¡Volveré a comprar!"</p>
-                <p>- Carlos Díaz</p>
-            </div>
-            
+        </section>
+        
+    <section id="banner-promocional" class="banner-promocional">
+        <img src="./assets/img/Banner.jpg.jpg" alt="Descuento Semanal">
+        <div class="banner-texto">
+            <h2>¡Descuento Semanal!</h2>
+            <p>No dejes pasar nuestras ofertas mágicas. <strong>Hasta 50% OFF</strong> en productos seleccionados.</p>
         </div>
     </section>
 
+    
+    <section id="reseñas" class="reseñas">
+        <h2>Reseñas de Clientes</h2>
+        <div id="reseñasCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#reseñasCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Reseña 1"></button>
+                <button type="button" data-bs-target="#reseñasCarousel" data-bs-slide-to="1" aria-label="Reseña 2"></button>
+                <button type="button" data-bs-target="#reseñasCarousel" data-bs-slide-to="2" aria-label="Reseña 3"></button>
+            </div>
+    
+            <!-- Contenido del Carrusel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="reseña">
+                        <p>"¡Increíble! Los productos son de la más alta calidad y llegaron rápidamente."</p>
+                        <p>- Juan Pérez</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="reseña">
+                        <p>"Recomiendo 100%. Todo lo que he comprado ha superado mis expectativas."</p>
+                        <p>- Ana Gómez</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="reseña">
+                        <p>"El servicio es excelente, me encantaron los productos. ¡Volveré a comprar!"</p>
+                        <p>- Carlos Díaz</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Flechas -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#reseñasCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#reseñasCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+    
     <!-- Sección Contacto -->
     <section id="contacto">
         <h2>Contacto</h2>
@@ -104,9 +178,42 @@
         </form>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 BLACK MYST. Todos los derechos reservados.</p>
     </footer>
+
+    <div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="carritoModalLabel">Carrito de Compras</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul id="carrito-items" class="list-group"></ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger" onclick="vaciarCarrito()">Vaciar Carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toast-container">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Notificación</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Producto agregado con éxito.
+            </div>
+        </div>
+    </div>
+
+    <button id="ir-arriba" class="btn btn-primary" title="Ir al cielo">&#8679;</button>
+    <script src="script.js"></script>
 </body>
 </html>

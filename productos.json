@@ -1,0 +1,8 @@
+[
+    { "id": 1, "nombre": "Bicycle Red Premium", "imagen": "./assets/img/image1.jpg", "precio": 1500 },
+    { "id": 2, "nombre": "Multiplicador de Bolas", "imagen": "./assets/img/image2.jpg", "precio": 1200 },
+    { "id": 3, "nombre": "Bicycle Standar Roja-Azul", "imagen": "./assets/img/image3.webp", "precio": 1100 },
+    { "id": 4, "nombre": "Caja de Magia", "imagen": "./assets/img/image4.jpg", "precio": 2000 },
+    { "id": 5, "nombre": "Baraja Cambio de Color", "imagen": "./assets/img/image5.jpg", "precio": 1800 },
+    { "id": 6, "nombre": "Magia con Naipes y Monedas", "imagen": "./assets/img/image6.webp", "precio": 1600 }
+]
