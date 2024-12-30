@@ -5,4 +5,3 @@ E-commerce de artículos de magia
 
 -----------
 
-Todavía tengo que mejorar el responsive del para móvil
